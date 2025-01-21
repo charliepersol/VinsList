@@ -1,0 +1,6116 @@
+
+			<!DOCTYPE html>
+		<html xmlns:abf-fn="http://CarloOrecchia" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <style>
+					table, th, td {
+					  border: 1px solid black;
+					  border-collapse: collapse;
+					}
+					
+					
+					#articoli {
+					  font-family: Arial, Helvetica, sans-serif;
+					  font-size: 12px;
+					  border-collapse: collapse;
+					  width: 100%;
+					}
+
+					#articoli tbody {
+
+					}
+
+
+					#articoli td, #articoli th {
+					  border: 1px solid #ddd;
+					  padding: 8px;
+					}
+
+					#articoli tr:nth-child(even){background-color: #f2f2f2;}
+
+					#articoli tr:hover {background-color: #ddd;}
+
+					#articoli th {
+					  padding-top: 12px;
+					  padding-bottom: 12px;
+					  text-align: left;
+					  background-color: #0074d9;
+					  color: white;
+					}
+					
+					#searchInput {
+					  background-image: url('./css/searchicon.png'); 	/* Add a search icon to input */
+					  background-position: 10px 12px; 					/* Position the search icon */
+					  background-repeat: no-repeat; 					/* Do not repeat the icon image */
+					  width: 100%; 										/* Full-width */
+					  font-size: 16px; 									/* Increase font-size */
+					  padding: 12px 20px 12px 40px; 					/* Add some padding */
+					  border: 1px solid #ddd; 							/* Add a grey border */
+					  margin-bottom: 12px; 								/* Add some space below the input */
+					}
+				
+				</style>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script><title>Lista alfabetica</title>
+   </head>
+   <body>
+	
+				
+					<script>
+							function tablesearch() {
+								var input, filter, table, tr, td, i, txtValue;
+								input = document.getElementById("searchInput");
+								filter = input.value.toUpperCase();
+								table = document.getElementById("articoli");
+								tr = table.getElementsByTagName("tr");
+
+								for (i = 0; i < tr.length; i++) {
+									td0 = tr[i].getElementsByTagName("td")[0];
+									td1 = tr[i].getElementsByTagName("td")[1];
+									td2 = tr[i].getElementsByTagName("td")[2];
+									td3 = tr[i].getElementsByTagName("td")[3];
+									td4 = tr[i].getElementsByTagName("td")[6];
+									
+									if (td0) {
+										txtValue = td0.textContent || td0.innerText;
+										if (txtValue.toUpperCase().indexOf(filter) > -1) { 
+											tr[i].style.display = "";
+										} else if (td1) {
+										txtValue = td1.textContent || td1.innerText;
+										if (txtValue.toUpperCase().indexOf(filter) > -1) { 
+											tr[i].style.display = "";
+										} else if (td2) {
+										txtValue = td2.textContent || td2.innerText;
+										if (txtValue.toUpperCase().indexOf(filter) > -1) { 
+											tr[i].style.display = "";
+										} else if (td3) {
+										txtValue = td3.textContent || td3.innerText;
+										if (txtValue.toUpperCase().indexOf(filter) > -1) { 
+											tr[i].style.display = "";
+										} else {
+										txtValue = td4.textContent || td3.innerText;
+										if (txtValue.toUpperCase().indexOf(filter) > -1) { 
+											tr[i].style.display = "";
+										} else {
+										tr[i].style.display = "none";
+										}}}}}
+									}
+								}					
+							}
+						</script>								
+					
+					
+				
+      <div class="container-fluid p-5 bg-primary text-white text-center"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <h1>ELENCO ARTICOLI IN VENDITA</h1></button><div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content text-black text-start">
+                  <div class="modal-header">
+                     <h5 class="modal-title">Cos'è?</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                  <div class="modal-body text-blue"></div>
+               </div>
+            </div>
+         </div>
+         <p>Articoli in vendita</p>
+      </div>
+      <div class="topnav">
+         					&nbsp;|&nbsp;<a href="./index.html">Home</a>
+         					&nbsp;|&nbsp;<a href="./Lista-WEB-Gruppi.html">Elenco per categorie</a>
+         					&nbsp;|&nbsp;<a href="./Lista-WEB-Marchi.html">Elenco per marca</a>&nbsp;|&nbsp;
+         				</div>
+					
+					<input type="text" id="searchInput" onkeyup="tablesearch()" placeholder="Ricerca per Marca/Modello/Tipo/Anno/Stato" title="Inserisci il valore da cercare">
+					
+				
+      <p>
+         <table id="articoli">
+            <thead>
+               <tr>
+                  <th>Marca</th>
+                  <th>Modello</th>
+                  <th>Tipo</th>
+                  <th>Anno</th>
+                  <th>Note</th>
+                  <th>Prezzo</th>
+                  <th>Stato</th>
+                  <th>Imballo</th>
+                  <th>Istruzioni</th>
+                  <th>Voltaggio</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>Accuphase</td>
+                  <td>E-405</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td></td>
+                  <td>2200</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Accuton</td>
+                  <td>midrange</td>
+                  <td>altoparlanti</td>
+                  <td></td>
+                  <td></td>
+                  <td>500</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td>si</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Acoustat</td>
+                  <td>Model Two + Two</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>1900</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Acoustat</td>
+                  <td>spectra 4400</td>
+                  <td>casse</td>
+                  <td>1994</td>
+                  <td></td>
+                  <td>2200</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Acoustat</td>
+                  <td>X</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>2200</td>
+                  <td></td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Acoustat</td>
+                  <td>X</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>piccole scariche (da un ampli?)</td>
+                  <td>2000</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Acoustic Research</td>
+                  <td>AR-11</td>
+                  <td>casse</td>
+                  <td>1977</td>
+                  <td></td>
+                  <td>500</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Acoustic Research</td>
+                  <td>AR-10</td>
+                  <td>casse</td>
+                  <td>1975</td>
+                  <td>(pi) griglie non originali</td>
+                  <td>800</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Acoustic Research</td>
+                  <td>AR-9</td>
+                  <td>casse</td>
+                  <td>1978</td>
+                  <td>prima serie</td>
+                  <td>1900</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Acoustic Research</td>
+                  <td>active partners</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>70</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td>no</td>
+                  <td>110</td>
+               </tr>
+               <tr>
+                  <td>Acoustic Research</td>
+                  <td>AR lst</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>1000</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Acoustic Research</td>
+                  <td>AR m6</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>vernice deterorata di natura</td>
+                  <td>400</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Acoustic Research</td>
+                  <td>AR mgc 1</td>
+                  <td>casse</td>
+                  <td>1988</td>
+                  <td>complete con ampli e cavi</td>
+                  <td>1200</td>
+                  <td>foam</td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Acoustic Research</td>
+                  <td>powered 570</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>attive 30w cad</td>
+                  <td>30</td>
+                  <td></td>
+                  <td>si</td>
+                  <td>no</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Acoustic Research</td>
+                  <td>powered 570</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>attive 30w cad. Costo la coppia</td>
+                  <td>30</td>
+                  <td></td>
+                  <td>no</td>
+                  <td>no</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Acoustic Research</td>
+                  <td>powered 570</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>attive 30w cad. Costo la coppia</td>
+                  <td>30</td>
+                  <td></td>
+                  <td>no</td>
+                  <td>no</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Acoustic Research</td>
+                  <td>sat 1</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>60</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td>no</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Acoustic Research</td>
+                  <td>space processor</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td></td>
+                  <td>10</td>
+                  <td></td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Acrosound</td>
+                  <td>to-330 1pz</td>
+                  <td>trasformatore out</td>
+                  <td>1955</td>
+                  <td></td>
+                  <td>350</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Ads</td>
+                  <td>ads1</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td></td>
+                  <td>50</td>
+                  <td></td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td>110</td>
+               </tr>
+               <tr>
+                  <td>Advent</td>
+                  <td>5002</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>400</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Advent</td>
+                  <td>5012</td>
+                  <td>casse</td>
+                  <td>1978</td>
+                  <td></td>
+                  <td>400</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Advent</td>
+                  <td>sound space contr.</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td></td>
+                  <td>50</td>
+                  <td></td>
+                  <td>no</td>
+                  <td>no</td>
+                  <td>110</td>
+               </tr>
+               <tr>
+                  <td>Akg</td>
+                  <td>hearo 777</td>
+                  <td>cuffia</td>
+                  <td></td>
+                  <td>cuffia wireless con processore surround</td>
+                  <td>80</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Akg</td>
+                  <td>k1000</td>
+                  <td>cuffia</td>
+                  <td></td>
+                  <td></td>
+                  <td>700</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Akg</td>
+                  <td>bap1000</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td></td>
+                  <td>700</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td>si, cd</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Akg</td>
+                  <td>bap1000</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td></td>
+                  <td>700</td>
+                  <td>alim. Rott</td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Akg</td>
+                  <td>hearo 999</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td></td>
+                  <td>50</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Allison</td>
+                  <td>ic20</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>senza telecomando</td>
+                  <td>1600</td>
+                  <td>barn</td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Allison</td>
+                  <td>one</td>
+                  <td>casse</td>
+                  <td>1975</td>
+                  <td></td>
+                  <td>900</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Allison</td>
+                  <td>two</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>mid e tw interni un po' rovinati ma sono ok,</td>
+                  <td>500</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Altec</td>
+                  <td>604-8k</td>
+                  <td>altoparlanti e crossover</td>
+                  <td></td>
+                  <td>con filtri e imballi, tutto nos</td>
+                  <td>1600</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Altec</td>
+                  <td>acousta voicette</td>
+                  <td>equalizzatore a terzi di ottava</td>
+                  <td>1982</td>
+                  <td>induttanze, 220v, lieve ronzio</td>
+                  <td>200</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td>no</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Aphex</td>
+                  <td>109 tubessence</td>
+                  <td>equalizzatore parametrico</td>
+                  <td>1999</td>
+                  <td>stereo 2 bande, mono 4 bande, buffer 12ax7</td>
+                  <td>100</td>
+                  <td>no alimen</td>
+                  <td>no</td>
+                  <td>no</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Aphex</td>
+                  <td>109 tubessence</td>
+                  <td>equalizzatore parametrico</td>
+                  <td>1999</td>
+                  <td>stereo 2 bande, mono 4 bande, buffer 12ax7</td>
+                  <td>100</td>
+                  <td>no alimen</td>
+                  <td>no</td>
+                  <td>no</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Apogee</td>
+                  <td>rosetta 200</td>
+                  <td>convertitore</td>
+                  <td>2008</td>
+                  <td>convertitore a/d e d/a, scheda usb da cercare</td>
+                  <td>650</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Arcam</td>
+                  <td>avp700e</td>
+                  <td>sintopreamplificatore AV</td>
+                  <td></td>
+                  <td>sintopre 7.1</td>
+                  <td>250</td>
+                  <td></td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Artesuono</td>
+                  <td>DA DEFINIRE</td>
+                  <td>subwoofer con satelliti</td>
+                  <td></td>
+                  <td>un tw non suona</td>
+                  <td>100</td>
+                  <td></td>
+                  <td>no</td>
+                  <td>no</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Audio Innovation</td>
+                  <td>Alto</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td></td>
+                  <td>180</td>
+                  <td></td>
+                  <td>no</td>
+                  <td>no</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Audio Innovation</td>
+                  <td>Alto</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td>con telecomando</td>
+                  <td>180</td>
+                  <td></td>
+                  <td>no</td>
+                  <td>no</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Audio Innovation</td>
+                  <td>Alto</td>
+                  <td>sintoamplificatore cd</td>
+                  <td></td>
+                  <td></td>
+                  <td>180</td>
+                  <td></td>
+                  <td>no</td>
+                  <td>no</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>audio precision</td>
+                  <td>system1</td>
+                  <td>Strumenti laboratorio</td>
+                  <td></td>
+                  <td>con pc, cavi, programma</td>
+                  <td>1400</td>
+                  <td>pronto</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Audio research</td>
+                  <td>bl-1</td>
+                  <td>bilanciatore</td>
+                  <td></td>
+                  <td>rca in, xlr out; 110v, lieve ronzio</td>
+                  <td>500</td>
+                  <td></td>
+                  <td>no</td>
+                  <td>no</td>
+                  <td>110</td>
+               </tr>
+               <tr>
+                  <td>Audio research</td>
+                  <td>d-115</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td></td>
+                  <td>1800</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Audio research</td>
+                  <td>d-79</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>4x 6550/ch, imballo, 220v</td>
+                  <td>3600</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Audio research</td>
+                  <td>vs-115</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>pulire pannello superiore</td>
+                  <td>2300</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Audio research</td>
+                  <td>sp-10</td>
+                  <td>preamplificatore</td>
+                  <td></td>
+                  <td>12x ecc88-6dj8, 2x 6l6wgc, 1x 12at7  (mk2?)</td>
+                  <td>3500</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Audio research</td>
+                  <td>sp-11</td>
+                  <td>preamplificatore</td>
+                  <td></td>
+                  <td>12ax7+fet, 220v</td>
+                  <td>2700</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Audio research</td>
+                  <td>sp-15</td>
+                  <td>preamplificatore</td>
+                  <td></td>
+                  <td>phono valvole, linea fet, nero, 220v</td>
+                  <td>2300</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>audio research</td>
+                  <td>kt88</td>
+                  <td>VALVOLE</td>
+                  <td></td>
+                  <td>25 pezzi, imballi new in box (nib)</td>
+                  <td>1000</td>
+                  <td>nos</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Audiolab</td>
+                  <td>delta 3</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>900</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bang and Olufsen</td>
+                  <td>form 2</td>
+                  <td>cuffia</td>
+                  <td></td>
+                  <td>manca foam</td>
+                  <td>50</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td>no</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bang and Olufsen</td>
+                  <td>h6 akn</td>
+                  <td>cuffia</td>
+                  <td>new</td>
+                  <td></td>
+                  <td>200</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bang and Olufsen</td>
+                  <td>beoplay</td>
+                  <td>dock</td>
+                  <td></td>
+                  <td>per iPad, boxed</td>
+                  <td>80</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td>si</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bang and Olufsen</td>
+                  <td>beogram 6000</td>
+                  <td>giradischi</td>
+                  <td></td>
+                  <td>piccola revisione, manca puntina</td>
+                  <td>500</td>
+                  <td></td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bang and Olufsen</td>
+                  <td>beosound 6</td>
+                  <td>lettore mp3</td>
+                  <td>new</td>
+                  <td></td>
+                  <td>150</td>
+                  <td>nuovi</td>
+                  <td>si</td>
+                  <td>si</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bang and Olufsen</td>
+                  <td>beocenter 2</td>
+                  <td>preamplificatore-dvd-tuner</td>
+                  <td></td>
+                  <td></td>
+                  <td>400</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bang and Olufsen</td>
+                  <td>beomaster 8000</td>
+                  <td>sintoamplificatore</td>
+                  <td></td>
+                  <td>piccola revisione sportelli</td>
+                  <td>700</td>
+                  <td></td>
+                  <td>no</td>
+                  <td>pdf</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bbe</td>
+                  <td>882</td>
+                  <td>processore psicoacustico</td>
+                  <td></td>
+                  <td></td>
+                  <td>50</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Beard</td>
+                  <td>m1000</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>2x mono; 16x 6550, 1 trasf.alim.non originale</td>
+                  <td>900</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Beard</td>
+                  <td>m70</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>12x el84/ch; 70w x2 8ohm cl.a; 2x mono</td>
+                  <td>1700</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Beard</td>
+                  <td>p35</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>6x el84/ch; 35w x2 8ohm cl.a  RONZIO</td>
+                  <td>950</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Behringer</td>
+                  <td>dcx2496</td>
+                  <td>crossover</td>
+                  <td>2013</td>
+                  <td>digitale fino a 3 vie stereo, boxed</td>
+                  <td>200</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Behringer</td>
+                  <td>peq2200</td>
+                  <td>equalizzatore parametrico</td>
+                  <td></td>
+                  <td></td>
+                  <td>90</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Behringer</td>
+                  <td>peq2200</td>
+                  <td>equalizzatore parametrico</td>
+                  <td></td>
+                  <td></td>
+                  <td>90</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Behringer</td>
+                  <td>ultraq t1951</td>
+                  <td>equalizzatore parametrico</td>
+                  <td>2000</td>
+                  <td></td>
+                  <td>180</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Behringer</td>
+                  <td>DA DEFINIRE</td>
+                  <td>processore psicoacustico</td>
+                  <td></td>
+                  <td></td>
+                  <td>50</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Benq</td>
+                  <td>trevolo s</td>
+                  <td>cassa bluetooth</td>
+                  <td>2018</td>
+                  <td>ibrida elettrostatica</td>
+                  <td>50</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bertagni</td>
+                  <td>sm270</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>piatte da pavimento</td>
+                  <td>60</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Beveridge</td>
+                  <td>system 2 sw2</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>2x elettrostatiche attive otl, 2x subwoofer attivi</td>
+                  <td>6500</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td>110v?</td>
+               </tr>
+               <tr>
+                  <td>Beveridge</td>
+                  <td>rm3</td>
+                  <td>crossover</td>
+                  <td></td>
+                  <td></td>
+                  <td>300</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td>110v?</td>
+               </tr>
+               <tr>
+                  <td>Beveridge</td>
+                  <td>rm1-2</td>
+                  <td>preamplificatore</td>
+                  <td></td>
+                  <td></td>
+                  <td>2600</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td>110v?</td>
+               </tr>
+               <tr>
+                  <td>Bose</td>
+                  <td>151</td>
+                  <td>casse</td>
+                  <td>1994</td>
+                  <td> all weather</td>
+                  <td>30</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bose</td>
+                  <td>2.2</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>120</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bose</td>
+                  <td>301</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>foam da rifare, mobili discreti</td>
+                  <td>60</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bose</td>
+                  <td>601</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>280</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bose</td>
+                  <td>601</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>380</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bose</td>
+                  <td>701</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>500</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bose</td>
+                  <td>901</td>
+                  <td>casse</td>
+                  <td>2004</td>
+                  <td>imballi, eq e stand</td>
+                  <td>800</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bose</td>
+                  <td>pls-1310</td>
+                  <td>sintoamplificatore cd</td>
+                  <td></td>
+                  <td></td>
+                  <td>600</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td>110v</td>
+               </tr>
+               <tr>
+                  <td>Bose</td>
+                  <td>3.2.1.</td>
+                  <td>sistema completo</td>
+                  <td></td>
+                  <td>radio/ dvd/ ampli 2.1 nel subwoofer, dvd esterno</td>
+                  <td>200</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bose</td>
+                  <td>lifestyle 12</td>
+                  <td>sistema completo</td>
+                  <td></td>
+                  <td></td>
+                  <td>320</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bose</td>
+                  <td>lifestyle 8</td>
+                  <td>sistema completo</td>
+                  <td></td>
+                  <td></td>
+                  <td>280</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bose</td>
+                  <td>acoustimass3</td>
+                  <td>subwoofer con satelliti</td>
+                  <td></td>
+                  <td></td>
+                  <td>150</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bose</td>
+                  <td>acoustimass3</td>
+                  <td>subwoofer con satelliti</td>
+                  <td></td>
+                  <td></td>
+                  <td>150</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bose</td>
+                  <td>acoustimass5</td>
+                  <td>subwoofer con satelliti</td>
+                  <td></td>
+                  <td>diversi sistemi in vendita</td>
+                  <td>220</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bose</td>
+                  <td>acoustimass5</td>
+                  <td>subwoofer con satelliti</td>
+                  <td></td>
+                  <td>diversi sistemi in vendita</td>
+                  <td>220</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bose</td>
+                  <td>acoustimass5</td>
+                  <td>subwoofer con satelliti</td>
+                  <td></td>
+                  <td>diversi sistemi in vendita</td>
+                  <td>220</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bose</td>
+                  <td>acoustimass5</td>
+                  <td>subwoofer con satelliti</td>
+                  <td></td>
+                  <td>diversi sistemi in vendita</td>
+                  <td>220</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bowers and Wilkins</td>
+                  <td>808</td>
+                  <td>casse</td>
+                  <td>1989</td>
+                  <td>un mid interruzione a bassissimo livello</td>
+                  <td>3800</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td>si</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bowers and Wilkins</td>
+                  <td>805d</td>
+                  <td>casse</td>
+                  <td>2013</td>
+                  <td></td>
+                  <td>2000</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td>si</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bowers and Wilkins</td>
+                  <td>J.Bowers active1</td>
+                  <td>casse</td>
+                  <td>1988</td>
+                  <td></td>
+                  <td>700</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bowers and Wilkins</td>
+                  <td>lm1</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>verde acqua</td>
+                  <td>150</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bowers and Wilkins</td>
+                  <td>lm1</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>verde acqua nos nib</td>
+                  <td>150</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bowers and Wilkins</td>
+                  <td>Oval</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>sistema satelliti + subwoofer</td>
+                  <td>150</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bowers and Wilkins</td>
+                  <td>Solid</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>sistema satelliti + subwoofer</td>
+                  <td>120</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Braun</td>
+                  <td>L1030</td>
+                  <td>casse</td>
+                  <td>1978</td>
+                  <td>pneumatica, wf25cm, mid+tw cupola seta</td>
+                  <td>200</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Braun</td>
+                  <td>L1030</td>
+                  <td>casse</td>
+                  <td>1980</td>
+                  <td>pneumatica, wf25cm, mid+tw cupola seta</td>
+                  <td>200</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Brionvega</td>
+                  <td>DA DEFINIRE</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td></td>
+                  <td>180</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Brionvega</td>
+                  <td>DA DEFINIRE</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td>ricambi</td>
+                  <td>60</td>
+                  <td>ricambio</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Brionvega</td>
+                  <td>DA DEFINIRE</td>
+                  <td>sintonizzatore</td>
+                  <td></td>
+                  <td></td>
+                  <td>180</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Brionvega</td>
+                  <td>DA DEFINIRE</td>
+                  <td>sintonizzatore</td>
+                  <td></td>
+                  <td>ricambi</td>
+                  <td>60</td>
+                  <td>ricambio</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Bss</td>
+                  <td>fcs926</td>
+                  <td>equalizzatore</td>
+                  <td></td>
+                  <td>analogico controllo digitale</td>
+                  <td>280</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>bss</td>
+                  <td>fcs926</td>
+                  <td>equalizzatore</td>
+                  <td></td>
+                  <td>analogico controllo digitale</td>
+                  <td>280</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Burwen</td>
+                  <td>tne7000a</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td>soppressore rumori vinile</td>
+                  <td>100</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td>110v</td>
+               </tr>
+               <tr>
+                  <td>Cabre</td>
+                  <td>as-102</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td></td>
+                  <td>220</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Cabre</td>
+                  <td>af-31</td>
+                  <td>indicatore watt</td>
+                  <td></td>
+                  <td>protezione casse e…</td>
+                  <td>100</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Cabre</td>
+                  <td>af-31</td>
+                  <td>indicatore watt</td>
+                  <td></td>
+                  <td>protezione casse e…</td>
+                  <td>100</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Cabre</td>
+                  <td>as-101</td>
+                  <td>preamplificatore</td>
+                  <td></td>
+                  <td></td>
+                  <td>180</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Cabre</td>
+                  <td>af-34</td>
+                  <td>toni</td>
+                  <td></td>
+                  <td>5 toni/ch</td>
+                  <td>160</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Cambridge Audio</td>
+                  <td>a250</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>2x mono160w8ohm,250w4ohm, 1 rotto</td>
+                  <td>280</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Cambridge Audio</td>
+                  <td>cd3</td>
+                  <td>lettore cd</td>
+                  <td></td>
+                  <td>all ok</td>
+                  <td>600</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Cambridge Audio</td>
+                  <td>cd3</td>
+                  <td>lettore cd</td>
+                  <td></td>
+                  <td>ricambi</td>
+                  <td>250</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Cambridge Audio</td>
+                  <td>t55</td>
+                  <td>sintonizzatore</td>
+                  <td></td>
+                  <td></td>
+                  <td>70</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Cambridge Audio</td>
+                  <td>p50</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td></td>
+                  <td>180</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Canon</td>
+                  <td>s-50</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>120</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Canon</td>
+                  <td>sv-15</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>50</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Canton</td>
+                  <td>plus c</td>
+                  <td>subwoofer con satelliti</td>
+                  <td></td>
+                  <td></td>
+                  <td>150</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Canton</td>
+                  <td>plus c</td>
+                  <td>subwoofer con satelliti</td>
+                  <td></td>
+                  <td></td>
+                  <td>150</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>capacimetro</td>
+                  <td>DA DEFINIRE</td>
+                  <td>Strumenti laboratorio</td>
+                  <td></td>
+                  <td></td>
+                  <td>70</td>
+                  <td>nuovo</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Carver</td>
+                  <td>m-400</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>200w/ch 8ohm</td>
+                  <td>200</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Carver</td>
+                  <td>m-400</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>200w/ch 8ohm</td>
+                  <td>200</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Carver</td>
+                  <td>m-400</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>200w/ch 8ohm</td>
+                  <td>200</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Carver</td>
+                  <td>silver-7</td>
+                  <td>amplificatore finale</td>
+                  <td>1990</td>
+                  <td>mono, 4 telai, 15x 6550/ch, 370w 8-4-2ohm</td>
+                  <td>4200</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Carver</td>
+                  <td>silver-7t</td>
+                  <td>amplificatore finale</td>
+                  <td>1990</td>
+                  <td>coppia mono, 570w 8ohm, 900w 4ohm</td>
+                  <td>850</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Carver</td>
+                  <td>sda-490t</td>
+                  <td>lettore cd</td>
+                  <td>1990</td>
+                  <td>uscita 12ax7</td>
+                  <td>350</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td>110v?</td>
+               </tr>
+               <tr>
+                  <td>Carver</td>
+                  <td>c-4000</td>
+                  <td>preamplificatore</td>
+                  <td>1988</td>
+                  <td>uguale al phase linear 4000 senza quadrifonia</td>
+                  <td>350</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Carver</td>
+                  <td>digital time lens</td>
+                  <td>processore</td>
+                  <td>1990</td>
+                  <td>analogico</td>
+                  <td>100</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td>110v?</td>
+               </tr>
+               <tr>
+                  <td>Carver</td>
+                  <td>ecs</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td>analogico</td>
+                  <td>100</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td>110v?</td>
+               </tr>
+               <tr>
+                  <td>Carver</td>
+                  <td>h9av</td>
+                  <td>processore</td>
+                  <td>1990</td>
+                  <td>ricostruttore di ambienza, analogico</td>
+                  <td>100</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td>110v?</td>
+               </tr>
+               <tr>
+                  <td>Celestion</td>
+                  <td>ditton66</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>come mk1 ma con passivo posteriore</td>
+                  <td>600</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Celestion</td>
+                  <td>kr-st</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>120</td>
+                  <td>pronto</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Celestion</td>
+                  <td>sl600</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>mobili in condizioni discrete</td>
+                  <td>600</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Celestion</td>
+                  <td>sl700se</td>
+                  <td>casse</td>
+                  <td>1991</td>
+                  <td>con stand originali</td>
+                  <td>850</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Celestion</td>
+                  <td>digital loudsp. Proc.</td>
+                  <td>processore digitale</td>
+                  <td></td>
+                  <td>per sl600si</td>
+                  <td>350</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Celestion</td>
+                  <td>system 6000 con 600si</td>
+                  <td>subwoofer con satelliti</td>
+                  <td></td>
+                  <td>con processore analogico (cross con eq)</td>
+                  <td>1800</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Cello</td>
+                  <td>duet</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td></td>
+                  <td>4200</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Cizek</td>
+                  <td>ka1</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>16cm + tw Peerless ko10dt</td>
+                  <td>380</td>
+                  <td>foam</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Cizek</td>
+                  <td>model 1</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>450</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Cizek</td>
+                  <td>model 3</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>180</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Cizek</td>
+                  <td>sound window</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>70</td>
+                  <td>foam</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Cizek</td>
+                  <td>kw1</td>
+                  <td>subwoofer</td>
+                  <td></td>
+                  <td>2x 25cm, mobile fessurato</td>
+                  <td>380</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Classé</td>
+                  <td>ca-300</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>300w/ch 8ohm</td>
+                  <td>2000</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Classé</td>
+                  <td>dr-3</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>2x 45w 8ohm, classe A - vhc</td>
+                  <td>4000</td>
+                  <td>vhc</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Classé</td>
+                  <td>ssp30</td>
+                  <td>preamplificatore av</td>
+                  <td></td>
+                  <td>preamplificatore av 7.1</td>
+                  <td>300</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Counterpoint</td>
+                  <td>sa4 otl</td>
+                  <td>amplificatore finale</td>
+                  <td>1988</td>
+                  <td>otl, mono, 160w 16ohm</td>
+                  <td>4000</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td>110v</td>
+               </tr>
+               <tr>
+                  <td>Dahlquist</td>
+                  <td>dq-10</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>serie 1 non speculare</td>
+                  <td>1500</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Dahlquist</td>
+                  <td>dq-20</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>3 vie</td>
+                  <td>1000</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Dahlquist</td>
+                  <td>dq-lp1</td>
+                  <td>Crossover attivo</td>
+                  <td></td>
+                  <td></td>
+                  <td>400</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Dahlquist</td>
+                  <td>mtx1</td>
+                  <td>Crossover passivo</td>
+                  <td></td>
+                  <td></td>
+                  <td>140</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Dahlquist</td>
+                  <td>sw1</td>
+                  <td>subwoofer</td>
+                  <td></td>
+                  <td></td>
+                  <td>350</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Dahlquist</td>
+                  <td>sw1</td>
+                  <td>subwoofer</td>
+                  <td></td>
+                  <td></td>
+                  <td>350</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Dbx</td>
+                  <td>sf1a + controller</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>1000</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td>110v?</td>
+               </tr>
+               <tr>
+                  <td>Dbx</td>
+                  <td>3bx</td>
+                  <td>espansore</td>
+                  <td></td>
+                  <td></td>
+                  <td>200</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Dbx</td>
+                  <td>3bx</td>
+                  <td>espansore</td>
+                  <td></td>
+                  <td> + remote</td>
+                  <td>300</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Dbx</td>
+                  <td>4bx</td>
+                  <td>espansore</td>
+                  <td></td>
+                  <td> + remote</td>
+                  <td>400</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Dbx</td>
+                  <td>5bx</td>
+                  <td>espansore</td>
+                  <td></td>
+                  <td> + remote</td>
+                  <td>750</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Dbx</td>
+                  <td>dx5</td>
+                  <td>lettore cd</td>
+                  <td></td>
+                  <td>meccanica kyocera, 110v</td>
+                  <td>120</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td>110v?</td>
+               </tr>
+               <tr>
+                  <td>Dbx</td>
+                  <td>120x</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td>sintetizzatore di subarmoniche analogico</td>
+                  <td>60</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Dbx</td>
+                  <td>120x-ds</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td>sintetizzatore di subarmoniche analogico</td>
+                  <td>60</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Dbx</td>
+                  <td>driverack 260</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td>digitale fino a 3vie stereo, eq, delay</td>
+                  <td>90</td>
+                  <td>ricambio</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Dbx</td>
+                  <td>driverack pa2</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td>digitale fino a 3vie stereo, eq, delay, compress.</td>
+                  <td>300</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Dbx</td>
+                  <td>sf10 controller</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Dbx</td>
+                  <td>200x</td>
+                  <td>selettore</td>
+                  <td></td>
+                  <td>3 registratori, 3 processori, passivo</td>
+                  <td>80</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Dbx</td>
+                  <td>400xg</td>
+                  <td>selettore</td>
+                  <td></td>
+                  <td>3 registratori, 3 processori, 220v</td>
+                  <td>100</td>
+                  <td>pronto</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Dbx</td>
+                  <td>dav600g</td>
+                  <td>selettore</td>
+                  <td></td>
+                  <td>3 apparati audio video</td>
+                  <td>100</td>
+                  <td>pronto</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Dcm</td>
+                  <td>time-window</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>time window 3</td>
+                  <td>500</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Decca</td>
+                  <td>london ribbon loudspeaker </td>
+                  <td>altoparlanti</td>
+                  <td></td>
+                  <td>tw + horn, coppia nos</td>
+                  <td>400</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Denon</td>
+                  <td>pma-970</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td></td>
+                  <td>350</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Denon</td>
+                  <td>upa-f88</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td>30w/ch 6ohm midi</td>
+                  <td>80</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Denon</td>
+                  <td>cocoon dsd-501</td>
+                  <td>sistema completo</td>
+                  <td></td>
+                  <td></td>
+                  <td>100</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Diapason</td>
+                  <td>adamantes</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>con stand</td>
+                  <td>1700</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Dynavox</td>
+                  <td>da30</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td>10w/ch; t-amp2024; batteria</td>
+                  <td>20</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Eminent Tecnologies</td>
+                  <td>et2</td>
+                  <td>braccio</td>
+                  <td></td>
+                  <td>tangenziale, con pompa</td>
+                  <td>650</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td>110v?</td>
+               </tr>
+               <tr>
+                  <td>Emt</td>
+                  <td>950 largo BBC</td>
+                  <td>giradischi</td>
+                  <td></td>
+                  <td>tutte le schede, mc in, line xlr out</td>
+                  <td>4800</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Ensemble</td>
+                  <td>pa1</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>1200</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Ergo</td>
+                  <td>tube amp per Float</td>
+                  <td>amplificatore per cuffia</td>
+                  <td></td>
+                  <td>per cuffia</td>
+                  <td>300</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Esb</td>
+                  <td>7/06</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>7/06 nos con imballi</td>
+                  <td>1500</td>
+                  <td>foam</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Ess</td>
+                  <td>amt Heil</td>
+                  <td>altoparlanti</td>
+                  <td></td>
+                  <td>tweeter grande, nuovo </td>
+                  <td>800</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Ess</td>
+                  <td>amt Heil</td>
+                  <td>altoparlanti</td>
+                  <td></td>
+                  <td>tweeter piccolo, nuovo </td>
+                  <td>350</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Ferguson Hill</td>
+                  <td>fh007</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>2x sat monovia+2x wf</td>
+                  <td>170</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Final</td>
+                  <td>80wmp</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>elettrostatiche, 5 pezzi, 2 stand</td>
+                  <td>500</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Galactron</td>
+                  <td>mk2120</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>leggero ronzio</td>
+                  <td>250</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Galactron</td>
+                  <td>mk16</td>
+                  <td>preamplificatore</td>
+                  <td></td>
+                  <td></td>
+                  <td>350</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Gale</td>
+                  <td>gs401a</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>800</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>General Electric</td>
+                  <td>6lf6</td>
+                  <td>VALVOLE</td>
+                  <td></td>
+                  <td>per counterpoint, 20 pezzi con imballi, uniche</td>
+                  <td>1800</td>
+                  <td>nos</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>General Electric</td>
+                  <td>Potenza</td>
+                  <td>VALVOLE</td>
+                  <td></td>
+                  <td>per beveridge, vendute da stefano zaini, imballi</td>
+                  <td>500</td>
+                  <td>nos</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>generatore</td>
+                  <td>a batteria 1kwa</td>
+                  <td>Strumenti laboratorio</td>
+                  <td></td>
+                  <td></td>
+                  <td>780</td>
+                  <td>nuovo</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Grundig</td>
+                  <td>finearts a 9009</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td>tda1541</td>
+                  <td>300</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Grundig</td>
+                  <td>210a</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>sferiche da tavolo</td>
+                  <td>70</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Grundig</td>
+                  <td>210b</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>sferiche da tavolo, imballo</td>
+                  <td>180</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Grundig</td>
+                  <td>510+stand tavolo</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>sferiche da tavolo</td>
+                  <td>200</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Grundig</td>
+                  <td>audiorama 4000</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>sferiche da tavolo</td>
+                  <td>200</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Grundig</td>
+                  <td>audiorama 700</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>cubi da tavolo</td>
+                  <td>100</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Grundig</td>
+                  <td>audiorama 7000</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>sferiche da terra con stand</td>
+                  <td>600</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Grundig</td>
+                  <td>audiorama 9000</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>sferiche da appendere, nuove</td>
+                  <td>600</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Grundig</td>
+                  <td>hifi-box-2500a</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>morsetti, no din</td>
+                  <td>400</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Grundig</td>
+                  <td>casse sconosciute</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>30</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Grundig</td>
+                  <td>hifi box 313 compact</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>100</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Grundig</td>
+                  <td>aktiv box xm 600</td>
+                  <td>casse attive</td>
+                  <td></td>
+                  <td></td>
+                  <td>180</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Grundig</td>
+                  <td>rpc 500</td>
+                  <td>compatto</td>
+                  <td></td>
+                  <td>completo</td>
+                  <td>380</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Grundig</td>
+                  <td>rpc 500</td>
+                  <td>compatto</td>
+                  <td></td>
+                  <td>senza sintonizzatore</td>
+                  <td>350</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Grundig</td>
+                  <td>r 3000</td>
+                  <td>sintoamplificatore</td>
+                  <td></td>
+                  <td>riparabile</td>
+                  <td>250</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Grundig</td>
+                  <td>r 3001</td>
+                  <td>sintoamplificatore</td>
+                  <td></td>
+                  <td>riparabile</td>
+                  <td>220</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Grundig</td>
+                  <td>v 7000</td>
+                  <td>sintoamplificatore</td>
+                  <td></td>
+                  <td>verificare modello</td>
+                  <td>60</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Grundig</td>
+                  <td>ovation3 cds8120</td>
+                  <td>sintoamplificatore cd</td>
+                  <td></td>
+                  <td>nuovo</td>
+                  <td>100</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Grundig</td>
+                  <td>t 1000</td>
+                  <td>sintonizzatore</td>
+                  <td></td>
+                  <td>slim line</td>
+                  <td>30</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Grundig</td>
+                  <td>pa3</td>
+                  <td>sistema completo</td>
+                  <td></td>
+                  <td></td>
+                  <td>300</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Grundig</td>
+                  <td>bassbox 302</td>
+                  <td>subwoofer</td>
+                  <td></td>
+                  <td>per audiorama 700</td>
+                  <td>50</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Hafler</td>
+                  <td>9300 </td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>transnova</td>
+                  <td>650</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Harman Kardon</td>
+                  <td>gla55</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>in perspex trasparente, attive, nuove</td>
+                  <td>650</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Harman Kardon</td>
+                  <td>citation xx</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>2750usd = 2318e + tr</td>
+                  <td>5500</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td>110v?</td>
+               </tr>
+               <tr>
+                  <td>Harman Kardon</td>
+                  <td>citation 2</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>4x 6550, 110v</td>
+                  <td>2700</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td>110v</td>
+               </tr>
+               <tr>
+                  <td>Harman Kardon</td>
+                  <td>DA DEFINIRE</td>
+                  <td>sistema completo</td>
+                  <td></td>
+                  <td>radiosveglia con cd</td>
+                  <td>50</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Harman Kardon</td>
+                  <td>soundstick</td>
+                  <td>subwoofer con satelliti</td>
+                  <td></td>
+                  <td>attive, open box</td>
+                  <td>100</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Harman Kardon</td>
+                  <td>soundstick</td>
+                  <td>subwoofer con satelliti</td>
+                  <td></td>
+                  <td>attive, nuove</td>
+                  <td>100</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Hhb</td>
+                  <td>cdr-830</td>
+                  <td>masterizzatore cd</td>
+                  <td></td>
+                  <td>masterizzatore cd, rack 2u, cassetto lieve difetto</td>
+                  <td>100</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Hi vi</td>
+                  <td>rt 1 II</td>
+                  <td>altoparlanti</td>
+                  <td></td>
+                  <td>supertweteer planari</td>
+                  <td>50</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Infinity</td>
+                  <td>sat mini</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>mini satelliti</td>
+                  <td>80</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Infinity</td>
+                  <td>ssw-10</td>
+                  <td>subwoofer</td>
+                  <td></td>
+                  <td></td>
+                  <td>80</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Jbl</td>
+                  <td>2155h</td>
+                  <td>Altoparlanti</td>
+                  <td></td>
+                  <td>coassiali 15 e 1 pollici</td>
+                  <td>450</td>
+                  <td>nuovi</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Jbl</td>
+                  <td>2226h</td>
+                  <td>Altoparlanti</td>
+                  <td>1994</td>
+                  <td>woofer 15 pollici 8pz</td>
+                  <td>1600</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Jbl</td>
+                  <td>2241hpl</td>
+                  <td>Altoparlanti</td>
+                  <td>2000</td>
+                  <td>woofer 18 pollici 4pz</td>
+                  <td>1000</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Jbl</td>
+                  <td>2392 90 x 50</td>
+                  <td>Altoparlanti</td>
+                  <td>2003</td>
+                  <td>tromba 4pz</td>
+                  <td>1100</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Jbl</td>
+                  <td>2445j e h</td>
+                  <td>Altoparlanti</td>
+                  <td>1990</td>
+                  <td>driver 2 pollici ferrite, 14kg, j=16ohm, h=8ohm, 4 coppie</td>
+                  <td>1500</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Jbl</td>
+                  <td>2490h</td>
+                  <td>Altoparlanti</td>
+                  <td>2003</td>
+                  <td>driver 3 pollici 8pz</td>
+                  <td>2200</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Jbl</td>
+                  <td>4312a</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>980</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Jbl</td>
+                  <td>control1</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>bianche, 3 coppie, foam, fissare tw     coppia</td>
+                  <td>270</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Jbl</td>
+                  <td>l90-int</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>30cm + 10cm + tw titanio,denmark made</td>
+                  <td>980</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Jbl</td>
+                  <td>wo118</td>
+                  <td>casse</td>
+                  <td>1994</td>
+                  <td>tromba+reflex per 18", vuote</td>
+                  <td>400</td>
+                  <td>riverniciar</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Jbl</td>
+                  <td>soundpact</td>
+                  <td>subwoofer</td>
+                  <td></td>
+                  <td></td>
+                  <td>10</td>
+                  <td>rotto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Jbl</td>
+                  <td>sw x2</td>
+                  <td>subwoofer</td>
+                  <td></td>
+                  <td></td>
+                  <td>80</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Jecklin</td>
+                  <td>Float Electrostat</td>
+                  <td>cuffia</td>
+                  <td></td>
+                  <td>elettrostatica</td>
+                  <td>350</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Jecklin</td>
+                  <td>Float Electrostat</td>
+                  <td>cuffia</td>
+                  <td></td>
+                  <td>elettrostatica</td>
+                  <td>350</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Jecklin</td>
+                  <td>Float Electrostat</td>
+                  <td>cuffia</td>
+                  <td></td>
+                  <td>elettrostatica</td>
+                  <td>350</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Jecklin</td>
+                  <td>Float Two</td>
+                  <td>cuffia</td>
+                  <td></td>
+                  <td>dinamica</td>
+                  <td>160</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Jecklin</td>
+                  <td>transdyn1+</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td>aumenta la separazione sx dx</td>
+                  <td>180</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>JJ</td>
+                  <td>kt88</td>
+                  <td>VALVOLE</td>
+                  <td></td>
+                  <td>4 pezzi accoppiati, imballi, poco usate</td>
+                  <td>100</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Jordan</td>
+                  <td>jx92s</td>
+                  <td>altoparlanti</td>
+                  <td></td>
+                  <td>larga banda, nuovi</td>
+                  <td>200</td>
+                  <td>nuovi</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Jordan</td>
+                  <td>jx92s the wall</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>500</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Jvc</td>
+                  <td>testa artificiale e …</td>
+                  <td>Processore</td>
+                  <td></td>
+                  <td></td>
+                  <td>120</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Jvc</td>
+                  <td>DA DEFINIRE</td>
+                  <td>sistema completo</td>
+                  <td></td>
+                  <td>compatto radio/dvd/ampli/casse</td>
+                  <td>10</td>
+                  <td>rotto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Kef</td>
+                  <td>103.2</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>350</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Kef</td>
+                  <td>103.3</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>Con stand originali - Richiedono Kef Kube 1 (in vendita)</td>
+                  <td>400</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Kef</td>
+                  <td>103.3 cube</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>Richiede Kef Kube 1 (in vendita)</td>
+                  <td>100</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Kef</td>
+                  <td>105.1</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>500</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Kef</td>
+                  <td>e301</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>satelliti o surround uovo bianche</td>
+                  <td>100</td>
+                  <td>pronto</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Kef</td>
+                  <td>egg blu attive</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>200</td>
+                  <td>nuovi</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Kef</td>
+                  <td>hts2001</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>5x satelliti uovo</td>
+                  <td>150</td>
+                  <td>pronto</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Kef</td>
+                  <td>ls50meta</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>1100</td>
+                  <td>nuovi</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Kef</td>
+                  <td>Kube 1</td>
+                  <td>Equalizzatore</td>
+                  <td></td>
+                  <td>Allinamento B6 per KEF 103.3</td>
+                  <td>100</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Kenwood</td>
+                  <td>L-a1</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td>100w/ch/8ohm 110v</td>
+                  <td>800</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td>110v</td>
+               </tr>
+               <tr>
+                  <td>Klark teknik</td>
+                  <td>dn27a</td>
+                  <td>equalizzatore grafico</td>
+                  <td></td>
+                  <td>mono, induttanze, xlr in out</td>
+                  <td>250</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Klark teknik</td>
+                  <td>dn27a</td>
+                  <td>equalizzatore grafico</td>
+                  <td></td>
+                  <td>mono, induttanze, xlr in out</td>
+                  <td>250</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Klark teknik</td>
+                  <td>dn27a</td>
+                  <td>equalizzatore grafico</td>
+                  <td></td>
+                  <td>mono, induttanze, xlr in out</td>
+                  <td>250</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Klark teknik</td>
+                  <td>dn360</td>
+                  <td>equalizzatore grafico</td>
+                  <td></td>
+                  <td>stereo, terzi ottava, xlr in out</td>
+                  <td>250</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Klark teknik</td>
+                  <td>dn410</td>
+                  <td>equalizzatore parametrico</td>
+                  <td></td>
+                  <td>stereo 5 bande, mono 10,xlr in out</td>
+                  <td>250</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Klark teknik</td>
+                  <td>dn410</td>
+                  <td>equalizzatore parametrico</td>
+                  <td></td>
+                  <td>stereo 5 bande, mono 10,xlr in out</td>
+                  <td>250</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Klh</td>
+                  <td>3 + analog bass comp.</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>250</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Klimo</td>
+                  <td>otl150</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>otl, 5x 6lf6</td>
+                  <td>1500</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Klipsch</td>
+                  <td>minisat</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>80</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Kr audio</td>
+                  <td>kronzilla sx</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>2 valvole nuove, 2 poco usate</td>
+                  <td>7500</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Krell</td>
+                  <td>fpb-300</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>leggero ronzio</td>
+                  <td>3000</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Krell</td>
+                  <td>mda-500</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>mono</td>
+                  <td>4900</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Leak</td>
+                  <td>tl 20</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td></td>
+                  <td>1400</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Lexicon</td>
+                  <td>mc-1</td>
+                  <td>preamplificatore con processore</td>
+                  <td></td>
+                  <td>lieve difetto volume (ok con telecomando)</td>
+                  <td>300</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Lexicon</td>
+                  <td>mc-1</td>
+                  <td>preamplificatore con processore</td>
+                  <td></td>
+                  <td>meglio vendere insieme a quello sopra</td>
+                  <td>50</td>
+                  <td>ricambio</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Lg</td>
+                  <td>adr 620</td>
+                  <td>masterizzatore cd</td>
+                  <td></td>
+                  <td>va solo una meccanica</td>
+                  <td>20</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Lg</td>
+                  <td>adr 620</td>
+                  <td>masterizzatore cd</td>
+                  <td></td>
+                  <td>va solo una meccanica</td>
+                  <td>20</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Linn</td>
+                  <td>index</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>150</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Linn</td>
+                  <td>isobarik dms</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>950</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Linn</td>
+                  <td>isobarik pms</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>950</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Linn</td>
+                  <td>sara prima serie</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>450</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Linn</td>
+                  <td>sara seconda serie</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>450</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Linn</td>
+                  <td>lk280</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td></td>
+                  <td>400</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Linn</td>
+                  <td>classik movie bianco</td>
+                  <td>sintoamplificatore av</td>
+                  <td></td>
+                  <td>dvd-radio-preamplificatore-finale 5 x 50watt</td>
+                  <td>400</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Lumley Reference</td>
+                  <td>st70 kt88</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td></td>
+                  <td>950</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Luxman</td>
+                  <td>L-410</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td></td>
+                  <td>290</td>
+                  <td>ENRICO</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Luxman</td>
+                  <td>L-530</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td></td>
+                  <td>700</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>M2tech</td>
+                  <td>hiface-dac</td>
+                  <td>usb-spdif</td>
+                  <td></td>
+                  <td>192k</td>
+                  <td>40</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Magnat</td>
+                  <td>mp 02</td>
+                  <td>altoparlanti</td>
+                  <td></td>
+                  <td>tweteer al plasma+ampli transistor</td>
+                  <td>800</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Magnepan</td>
+                  <td>Magneplanar</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>2400</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Marantz</td>
+                  <td>sd1020</td>
+                  <td>cassette</td>
+                  <td></td>
+                  <td></td>
+                  <td>30</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Marantz</td>
+                  <td>8</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>2300e 11-11-16 + 200e cage</td>
+                  <td>3000</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>110v</td>
+               </tr>
+               <tr>
+                  <td>Marantz</td>
+                  <td>sm1000</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>400w/ch/8ohm 110v</td>
+                  <td>1600</td>
+                  <td>rotto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Marantz</td>
+                  <td>cd1020</td>
+                  <td>lettore cd</td>
+                  <td></td>
+                  <td></td>
+                  <td>60</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Marantz</td>
+                  <td>cd94</td>
+                  <td>lettore cd</td>
+                  <td></td>
+                  <td>Gold</td>
+                  <td>500</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Marantz</td>
+                  <td>cd94</td>
+                  <td>lettore cd</td>
+                  <td></td>
+                  <td>Nero</td>
+                  <td>500</td>
+                  <td>pronto</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Marantz</td>
+                  <td>ax1000dsp</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td></td>
+                  <td>600</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Marantz</td>
+                  <td>ax1000dsp</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td></td>
+                  <td>600</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Marantz</td>
+                  <td>sx72</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td>riduttore rumori impulsivi digitale</td>
+                  <td>80</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Marantz</td>
+                  <td>sr1020</td>
+                  <td>sintoamplificatore</td>
+                  <td></td>
+                  <td></td>
+                  <td>90</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Marantz</td>
+                  <td>sr7100dc</td>
+                  <td>sintoamplificatore</td>
+                  <td></td>
+                  <td></td>
+                  <td>150</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Marantz</td>
+                  <td>arc</td>
+                  <td>sistema completo</td>
+                  <td></td>
+                  <td></td>
+                  <td>180</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Marantz</td>
+                  <td>layla</td>
+                  <td>sistema completo</td>
+                  <td></td>
+                  <td></td>
+                  <td>250</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Marantz</td>
+                  <td>ms7000</td>
+                  <td>sistema completo</td>
+                  <td></td>
+                  <td>dock ipod, wifi, cassa integrata, bianco</td>
+                  <td>180</td>
+                  <td>pronto</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Marantz</td>
+                  <td>ms7000</td>
+                  <td>sistema completo</td>
+                  <td></td>
+                  <td>dock ipod, wifi, cassa integrata, nero</td>
+                  <td>180</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Mark Levinson</td>
+                  <td>n20.5</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>2x mono 100w8ohm</td>
+                  <td>5500</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>McIntosh</td>
+                  <td>mq104</td>
+                  <td>eq parametrico</td>
+                  <td></td>
+                  <td>stereo 4 bande per bassi</td>
+                  <td>180</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td>110v</td>
+               </tr>
+               <tr>
+                  <td>McIntosh</td>
+                  <td>mc300 </td>
+                  <td>amplificatore finale</td>
+                  <td>1998</td>
+                  <td></td>
+                  <td>3600</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>McIntosh</td>
+                  <td>mc30</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>2x mono 30w8ohm; Valvole:  1614+6l6 rca</td>
+                  <td>2800</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td>110v</td>
+               </tr>
+               <tr>
+                  <td>Meyer</td>
+                  <td>cp10</td>
+                  <td>equalizzatore parametrico</td>
+                  <td></td>
+                  <td>seminuovo, trimmer</td>
+                  <td>250</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Meyer</td>
+                  <td>cp10s</td>
+                  <td>equalizzatore parametrico</td>
+                  <td></td>
+                  <td></td>
+                  <td>220</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Michaelson Audio</td>
+                  <td>odysseus</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td>2x 50w 8ohm, 4x el34/ch, classe A</td>
+                  <td>700</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Michaelson and Austin</td>
+                  <td>tva-1</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>morsetto rotto, controllare bene</td>
+                  <td>950</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Michell</td>
+                  <td>Gyrodec</td>
+                  <td>giradischi</td>
+                  <td>2021</td>
+                  <td>mai aperto, fattura ultimo giorno pre-brexit</td>
+                  <td>2000</td>
+                  <td>nuovi</td>
+                  <td>si</td>
+                  <td>si</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Ming-da</td>
+                  <td>phono pre</td>
+                  <td>preamplificatore RIAA</td>
+                  <td></td>
+                  <td></td>
+                  <td>150</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Musical Fidelity</td>
+                  <td>a370</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>2x 185w 8ohm, mosfet, classe A</td>
+                  <td>1200</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Musical Fidelity</td>
+                  <td>nu-vista 300</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>2x 300w alimentazione induttiva separata</td>
+                  <td>2200</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td>110v</td>
+               </tr>
+               <tr>
+                  <td>Musical Fidelity</td>
+                  <td>ma50</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>3x mono 50w 8ohm, classe A</td>
+                  <td>600</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Musical Fidelity</td>
+                  <td>x-a50</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>2x mono 50w 8ohm, classe A, imballi</td>
+                  <td>450</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Nad</td>
+                  <td>302</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td></td>
+                  <td>180</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Nad</td>
+                  <td>3020</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td></td>
+                  <td>150</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Naim</td>
+                  <td>snaxo</td>
+                  <td>crossover</td>
+                  <td></td>
+                  <td>per linn isobarik</td>
+                  <td>300</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Nakamichi</td>
+                  <td>dragon lily</td>
+                  <td>cassa bluetooth</td>
+                  <td></td>
+                  <td>open box</td>
+                  <td>60</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Nakamichi</td>
+                  <td>dragon lily</td>
+                  <td>cassa bluetooth</td>
+                  <td></td>
+                  <td>open box</td>
+                  <td>60</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Nakamichi</td>
+                  <td>oms-7</td>
+                  <td>lettore cd</td>
+                  <td></td>
+                  <td></td>
+                  <td>400</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td>110</td>
+               </tr>
+               <tr>
+                  <td>Nakamichi</td>
+                  <td>soundspace 2</td>
+                  <td>radiosveglia</td>
+                  <td>2002</td>
+                  <td>open box</td>
+                  <td>40</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Nakamichi</td>
+                  <td>soundspace 2</td>
+                  <td>radiosveglia</td>
+                  <td>2002</td>
+                  <td></td>
+                  <td>40</td>
+                  <td>nuovi</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Nakamichi</td>
+                  <td>soundspace 2</td>
+                  <td>radiosveglia</td>
+                  <td>2002</td>
+                  <td></td>
+                  <td>40</td>
+                  <td>nuovi</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Nakamichi</td>
+                  <td>680</td>
+                  <td>registratore</td>
+                  <td></td>
+                  <td></td>
+                  <td>500</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>neutrik</td>
+                  <td>DA DEFINIRE</td>
+                  <td>Strumenti laboratorio</td>
+                  <td></td>
+                  <td>distorsiometro, oscillatore</td>
+                  <td>200</td>
+                  <td>pronto</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Numark</td>
+                  <td>ppd dm 1950</td>
+                  <td>mixer</td>
+                  <td>1990</td>
+                  <td>flight case</td>
+                  <td>120</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Opera loudspeaker</td>
+                  <td>opera</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>suono riferimento</td>
+                  <td>180</td>
+                  <td>pronto</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Oppo</td>
+                  <td>udp-205</td>
+                  <td>lettore universale</td>
+                  <td></td>
+                  <td>open box</td>
+                  <td>2600</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>ortofon</td>
+                  <td>DA DEFINIRE</td>
+                  <td>Strumenti laboratorio</td>
+                  <td></td>
+                  <td>analizzatore per testine RARISSIMO completo</td>
+                  <td>600</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Ortofon</td>
+                  <td>jubilee</td>
+                  <td>testina</td>
+                  <td></td>
+                  <td></td>
+                  <td>950</td>
+                  <td>nuovi</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Ortofon</td>
+                  <td>mc20</td>
+                  <td>testina</td>
+                  <td></td>
+                  <td>668 ore di lavoro</td>
+                  <td>90</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Ortofon</td>
+                  <td>t30</td>
+                  <td>trasformatore</td>
+                  <td></td>
+                  <td></td>
+                  <td>400</td>
+                  <td>pronto</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>oscilloscopio</td>
+                  <td>DA DEFINIRE</td>
+                  <td>Strumenti laboratorio</td>
+                  <td></td>
+                  <td></td>
+                  <td>900</td>
+                  <td>nuovo</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Outline</td>
+                  <td>peq</td>
+                  <td>equalizzatore parametrico</td>
+                  <td></td>
+                  <td>da riparare, estetica come nuovo</td>
+                  <td>90</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Perreaux</td>
+                  <td>input selector</td>
+                  <td>input selector</td>
+                  <td></td>
+                  <td></td>
+                  <td>90</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Philips</td>
+                  <td>rh541</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>3x attive 2vie</td>
+                  <td>280</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Philips</td>
+                  <td>rh544</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>attive 3vie</td>
+                  <td>280</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Philips</td>
+                  <td>rh545</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>attive 3vie</td>
+                  <td>950</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Philips</td>
+                  <td>rh567</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>3x attive 3vie</td>
+                  <td>600</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Philips</td>
+                  <td>mcd900</td>
+                  <td>completo</td>
+                  <td></td>
+                  <td>pre valvola, cd rotto</td>
+                  <td>140</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Philips</td>
+                  <td>mcd908</td>
+                  <td>completo</td>
+                  <td></td>
+                  <td>cd rotto</td>
+                  <td>150</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Philips</td>
+                  <td>cdr775</td>
+                  <td>masterizzatore</td>
+                  <td></td>
+                  <td></td>
+                  <td>90</td>
+                  <td>rotto</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Philips</td>
+                  <td>cdr875</td>
+                  <td>masterizzatore</td>
+                  <td></td>
+                  <td></td>
+                  <td>90</td>
+                  <td>pronto</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Philips</td>
+                  <td>EL34</td>
+                  <td>VALVOLE</td>
+                  <td></td>
+                  <td>per marantz 8b, quartetto selezionato audiokit, fattura</td>
+                  <td>600</td>
+                  <td>nos</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Pioneer</td>
+                  <td>sa-9800</td>
+                  <td>amplificatore integrato</td>
+                  <td>78</td>
+                  <td>2x 100w, loudness, turnover; pulire</td>
+                  <td>950</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Pioneer</td>
+                  <td>pl-l1000</td>
+                  <td>giradischi</td>
+                  <td></td>
+                  <td>pulire, manutenzione, cinghia braccio</td>
+                  <td>480</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Pioneer</td>
+                  <td>cdr-609</td>
+                  <td>masterizzatore</td>
+                  <td></td>
+                  <td></td>
+                  <td>90</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Polk</td>
+                  <td>srs 2.3tl</td>
+                  <td>casse</td>
+                  <td>91</td>
+                  <td>restauro fianchi in basso</td>
+                  <td>900</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Polysonic</td>
+                  <td>all weather</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>Float Electrostat nos</td>
+                  <td>10</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Pure</td>
+                  <td>sensia</td>
+                  <td>radio wifi dab</td>
+                  <td></td>
+                  <td>con cassa integrata</td>
+                  <td>90</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Pure</td>
+                  <td>sensia</td>
+                  <td>radio wifi dab</td>
+                  <td></td>
+                  <td>con cassa integrata</td>
+                  <td></td>
+                  <td>ricambio</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Qed</td>
+                  <td>DA DEFINIRE</td>
+                  <td>commutatore cuffia altoparlanti</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Qed</td>
+                  <td>DA DEFINIRE</td>
+                  <td>selettore altoparlanti</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Qed</td>
+                  <td>DA DEFINIRE</td>
+                  <td>selettore altoparlanti</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Qed</td>
+                  <td>mb40</td>
+                  <td>Selettore registratori 3x</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Qed</td>
+                  <td>DA DEFINIRE</td>
+                  <td>volume cuffia</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Quad</td>
+                  <td>ESL-989</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>elettrostatiche nouveau</td>
+                  <td>1700</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Quad</td>
+                  <td>ESL-989</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>elettrostatiche vintage</td>
+                  <td>1700</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Quad</td>
+                  <td>ESL-989</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>elettrostatiche vintage</td>
+                  <td>1700</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Quad</td>
+                  <td>303</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>bulgin, alimentatore incompleto</td>
+                  <td>300</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Quad</td>
+                  <td>303</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td></td>
+                  <td>400</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Quad</td>
+                  <td>405</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>mettere pin, controllare</td>
+                  <td>400</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Radford</td>
+                  <td>sta25</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>4x el34, ronzio fortissimo, a rischio</td>
+                  <td>1600</td>
+                  <td>as is</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Radford</td>
+                  <td>sta25</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>4x el34</td>
+                  <td>2200</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Rane</td>
+                  <td>thx44</td>
+                  <td>equalizzatore AV</td>
+                  <td></td>
+                  <td>equalizzatore grafico e parametrico per i 3 canali frontali, parametrico per due canali
+                     subwoofer</td>
+                  <td>200</td>
+                  <td>nuovi</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>RCA</td>
+                  <td>6l6 </td>
+                  <td>VALVOLE</td>
+                  <td></td>
+                  <td>per mc30, nos con imballi, 5 pezzi ex montarbo</td>
+                  <td>400</td>
+                  <td>nos</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Rcf</td>
+                  <td>br 1056</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>400</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Rcf</td>
+                  <td>br 1380</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>estetica discreta, montare woofer,</td>
+                  <td>320</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Rcf</td>
+                  <td>scd 6000</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>pulire mobile</td>
+                  <td>600</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Rcf</td>
+                  <td>x02</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>300</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Rcf</td>
+                  <td>x02</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>300</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Revox</td>
+                  <td>b250</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td>sostituire trasformatore, danno usuale</td>
+                  <td>600</td>
+                  <td>rotto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Revox</td>
+                  <td>baby</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>150</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Revox</td>
+                  <td>stereolith duetto</td>
+                  <td>casse e subwoofer</td>
+                  <td></td>
+                  <td></td>
+                  <td>200</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Revox</td>
+                  <td>b242</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>200w ch 8ohm</td>
+                  <td>1900</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Revox</td>
+                  <td>b226</td>
+                  <td>lettore cd</td>
+                  <td></td>
+                  <td></td>
+                  <td>400</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Revox</td>
+                  <td>b226</td>
+                  <td>lettore cd</td>
+                  <td></td>
+                  <td></td>
+                  <td>500</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Revox</td>
+                  <td>a70</td>
+                  <td>sintonizzatore</td>
+                  <td></td>
+                  <td></td>
+                  <td>150</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Revox</td>
+                  <td>b260</td>
+                  <td>sintonizzatore</td>
+                  <td></td>
+                  <td>da riparare</td>
+                  <td>400</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Revox</td>
+                  <td>b260</td>
+                  <td>sintonizzatore</td>
+                  <td></td>
+                  <td></td>
+                  <td>380</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Revox</td>
+                  <td>b760</td>
+                  <td>sintonizzatore</td>
+                  <td></td>
+                  <td></td>
+                  <td>450</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Rogers</td>
+                  <td>db101</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>200</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Rogers</td>
+                  <td>db101</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>200</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Rogers</td>
+                  <td>ls3/5a</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>1000</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Rogers</td>
+                  <td>ls3/5a</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>1300</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Rogers</td>
+                  <td>ls3/5a</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>una nera, una chiara</td>
+                  <td>1200</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Rogers</td>
+                  <td>ls3/5a</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>casse vuote</td>
+                  <td>300</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Rogers</td>
+                  <td>ls5/8 con quad 405</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>speakon</td>
+                  <td>3000</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Rogers</td>
+                  <td>ls5/9</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>bianche, ex bbc, xlr in, 1 mobile da falegname</td>
+                  <td>1700</td>
+                  <td>riverniciat</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Rogers</td>
+                  <td>ab1</td>
+                  <td>subwoofer</td>
+                  <td></td>
+                  <td>per ls3/5a</td>
+                  <td>500</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Rogers</td>
+                  <td>ls subwoofer</td>
+                  <td>subwoofer</td>
+                  <td></td>
+                  <td>primo subwoofer per ls3/5a</td>
+                  <td>350</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Roland</td>
+                  <td>e660</td>
+                  <td>equalizzatore parametrico</td>
+                  <td></td>
+                  <td></td>
+                  <td>200</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Russound</td>
+                  <td>pro-12</td>
+                  <td>selettore spk</td>
+                  <td></td>
+                  <td></td>
+                  <td>10</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sae</td>
+                  <td>2800</td>
+                  <td>equalizzatore parametrico</td>
+                  <td></td>
+                  <td></td>
+                  <td>200</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td>110v</td>
+               </tr>
+               <tr>
+                  <td>Sae</td>
+                  <td>x-25a</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td></td>
+                  <td>1600</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sae</td>
+                  <td>5000</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td></td>
+                  <td>200</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>saldatore</td>
+                  <td>weller</td>
+                  <td>Strumenti laboratorio</td>
+                  <td></td>
+                  <td>con alimentatore 230-110v</td>
+                  <td>150</td>
+                  <td>pronto</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sansui</td>
+                  <td>a-777</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td></td>
+                  <td>450</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sansui</td>
+                  <td>au-111</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td>valvole</td>
+                  <td>3000</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td>110v</td>
+               </tr>
+               <tr>
+                  <td>Sansui</td>
+                  <td>au-317</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td></td>
+                  <td>200</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Scandyna</td>
+                  <td>housepod</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>1900</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Scandyna</td>
+                  <td>micropod se attive</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>130</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Scandyna</td>
+                  <td>minipod blu</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>250</td>
+                  <td>pronto</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Seleco</td>
+                  <td>stc3000</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td></td>
+                  <td>350</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Seleco</td>
+                  <td>aradio</td>
+                  <td>radio da tavolo</td>
+                  <td>new</td>
+                  <td></td>
+                  <td></td>
+                  <td>rotto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Seleco</td>
+                  <td>stc1010</td>
+                  <td>sintonizzatore</td>
+                  <td></td>
+                  <td></td>
+                  <td>300</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sennheiser</td>
+                  <td>lucas</td>
+                  <td>processore cuffie</td>
+                  <td></td>
+                  <td>surround per cuffie</td>
+                  <td>40</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Shuguang</td>
+                  <td>stereo 845</td>
+                  <td>amplificatore finale</td>
+                  <td>2008</td>
+                  <td>18w/ch 8ohm, riresinare trasformatori out</td>
+                  <td>700</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sonab</td>
+                  <td>DA DEFINIRE</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>150</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sonic frontiers</td>
+                  <td>power-2</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>2x 110w8ohm, 4x 6550/ch</td>
+                  <td>2600</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sonic frontiers</td>
+                  <td>power-2</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>2x 110w8ohm, 4x 6550/ch</td>
+                  <td>2600</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sonic frontiers</td>
+                  <td>power-2</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td>2x 110w8ohm, 4x 6550/ch</td>
+                  <td>2600</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sony</td>
+                  <td>sys905</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td></td>
+                  <td>150</td>
+                  <td>da riparar</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sony</td>
+                  <td>sys905</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td></td>
+                  <td>30</td>
+                  <td>ricambio</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sony</td>
+                  <td>Float Electrostat</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>tw elettrostatico</td>
+                  <td>250</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sony</td>
+                  <td>sys905</td>
+                  <td>cassette</td>
+                  <td></td>
+                  <td></td>
+                  <td>30</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sony</td>
+                  <td>ps-f5</td>
+                  <td>giradischi</td>
+                  <td></td>
+                  <td>verticale, alimentazione esterna, da controllare</td>
+                  <td>250</td>
+                  <td>as is</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sony</td>
+                  <td>ps-f5</td>
+                  <td>giradischi</td>
+                  <td></td>
+                  <td>verticale, alimentazione esterna, da controllare</td>
+                  <td>250</td>
+                  <td>as is</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sony</td>
+                  <td>ps-x555es</td>
+                  <td>giradischi</td>
+                  <td></td>
+                  <td></td>
+                  <td>250</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sony</td>
+                  <td>ps-x555es</td>
+                  <td>giradischi</td>
+                  <td></td>
+                  <td></td>
+                  <td>250</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sony</td>
+                  <td>cdp-cx260</td>
+                  <td>lettore cd</td>
+                  <td></td>
+                  <td>200cd</td>
+                  <td>90</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sony</td>
+                  <td>cdp-cx450</td>
+                  <td>lettore cd</td>
+                  <td></td>
+                  <td>400cd</td>
+                  <td>90</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sony</td>
+                  <td>sys905</td>
+                  <td>lettore cd</td>
+                  <td></td>
+                  <td></td>
+                  <td>30</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sony</td>
+                  <td>ta-e1000esd</td>
+                  <td>preamplificatore con processore</td>
+                  <td></td>
+                  <td>senza telecomando, botti</td>
+                  <td>150</td>
+                  <td>ricambio</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sony</td>
+                  <td>ta-e2000esd</td>
+                  <td>preamplificatore con processore</td>
+                  <td></td>
+                  <td></td>
+                  <td>160</td>
+                  <td>ricambio</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sony</td>
+                  <td>sdp-m905</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td></td>
+                  <td>60</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sony</td>
+                  <td>sdp-m905</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td></td>
+                  <td>60</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sony</td>
+                  <td>sys905</td>
+                  <td>sintonizzatore</td>
+                  <td></td>
+                  <td></td>
+                  <td>30</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>sound technology</td>
+                  <td>DA DEFINIRE</td>
+                  <td>Strumenti laboratorio</td>
+                  <td></td>
+                  <td>distorsiometro</td>
+                  <td>300</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Souther</td>
+                  <td>sla3</td>
+                  <td>braccio</td>
+                  <td></td>
+                  <td>tangenziale</td>
+                  <td>400</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Spica</td>
+                  <td>angelus</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>750</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Spica</td>
+                  <td>tc-50</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>imballi</td>
+                  <td>600</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Spica</td>
+                  <td>tc-60</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>500</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>stabilizzatore 2k</td>
+                  <td>elettronico</td>
+                  <td>Strumenti laboratorio</td>
+                  <td></td>
+                  <td></td>
+                  <td>150</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>stabilizzatore 5k</td>
+                  <td>elettromeccanico</td>
+                  <td>Strumenti laboratorio</td>
+                  <td></td>
+                  <td></td>
+                  <td>150</td>
+                  <td>pronto</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Studer</td>
+                  <td>a727</td>
+                  <td>lettore cd</td>
+                  <td></td>
+                  <td>non si apre</td>
+                  <td>599</td>
+                  <td>rotto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Studer</td>
+                  <td>d732</td>
+                  <td>lettore cd</td>
+                  <td></td>
+                  <td></td>
+                  <td>1000</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Sunfire</td>
+                  <td>true subwoofer</td>
+                  <td>subwoofer</td>
+                  <td></td>
+                  <td>110v</td>
+                  <td>500</td>
+                  <td>pronto</td>
+                  <td></td>
+                  <td></td>
+                  <td>110v</td>
+               </tr>
+               <tr>
+                  <td>Superscope</td>
+                  <td>cd-230</td>
+                  <td>cassette</td>
+                  <td></td>
+                  <td>portatile, come nuovo, da controllare</td>
+                  <td>300</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Svetlana</td>
+                  <td>6550 svetlana winged c</td>
+                  <td>VALVOLE</td>
+                  <td></td>
+                  <td>per citation 2, quartetto selezionato audiokit, fattura</td>
+                  <td>700</td>
+                  <td>nos</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tannoy</td>
+                  <td>system 15 dmt</td>
+                  <td>altoparlanti</td>
+                  <td></td>
+                  <td></td>
+                  <td>1500</td>
+                  <td>nuovi</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tannoy</td>
+                  <td>arden</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>rimontare altoparlanti, lucidare mobili</td>
+                  <td>2300</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tannoy</td>
+                  <td>eclipse 8</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>singola, centrale, attiva, 3v, stw</td>
+                  <td>700</td>
+                  <td>nuovi</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tannoy</td>
+                  <td>i5akt</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>attive, 4pz, tot</td>
+                  <td>400</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tannoy</td>
+                  <td>precision 6d</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>3 pezzi left+right+centre. totale</td>
+                  <td>600</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tannoy</td>
+                  <td>system 10 dmt</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>700</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tannoy</td>
+                  <td>system 1000</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>3 pezzi left+right+centre</td>
+                  <td>1000</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tannoy</td>
+                  <td>system 1200</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>1300</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tannoy</td>
+                  <td>system 15 dmt</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>2300</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tannoy</td>
+                  <td>system 600</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>300</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tannoy</td>
+                  <td>system 8 dmt</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>400</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tannoy</td>
+                  <td>xo5000</td>
+                  <td>crossover</td>
+                  <td></td>
+                  <td></td>
+                  <td>350</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tannoy</td>
+                  <td>xo5000</td>
+                  <td>crossover</td>
+                  <td></td>
+                  <td></td>
+                  <td>350</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tannoy</td>
+                  <td>tdx1</td>
+                  <td>processore digitale</td>
+                  <td></td>
+                  <td>Digital System Controller. Ideal for Tannoy I Series loudspeakers as well as many
+                     others. The Tannoy TDX1 is a 2 in 4 out, powerful, digital system controller, which
+                     features Crossover, EQ, Delay and Limiting functions. </td>
+                  <td>250</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tannoy</td>
+                  <td>tdx1</td>
+                  <td>processore digitale</td>
+                  <td></td>
+                  <td>Digital System Controller. Ideal for Tannoy I Series loudspeakers as well as many
+                     others. The Tannoy TDX1 is a 2 in 4 out, powerful, digital system controller, which
+                     features Crossover, EQ, Delay and Limiting functions. </td>
+                  <td>250</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tannoy</td>
+                  <td>ts 1201</td>
+                  <td>subwoofer</td>
+                  <td></td>
+                  <td>attivo 500watt, nuovo, sosp.pneumatica</td>
+                  <td>450</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tannoy</td>
+                  <td>ts8</td>
+                  <td>subwoofer</td>
+                  <td></td>
+                  <td>modificato in passivo</td>
+                  <td></td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tascam</td>
+                  <td>pe40</td>
+                  <td>equalizzatore parametrico</td>
+                  <td></td>
+                  <td></td>
+                  <td>180</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tascam</td>
+                  <td>pe40</td>
+                  <td>equalizzatore parametrico</td>
+                  <td></td>
+                  <td></td>
+                  <td>180</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tdl</td>
+                  <td>compact monitor</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>650</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tdl</td>
+                  <td>near field monitor</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>80</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Technics</td>
+                  <td>sb-f3</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>2vie, alluminio</td>
+                  <td>200</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Technics</td>
+                  <td>rtr979w</td>
+                  <td>cassette</td>
+                  <td>1999</td>
+                  <td></td>
+                  <td>300</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Technics</td>
+                  <td>sh-3045</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td>di ambienza per cuffie</td>
+                  <td>140</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td>110v</td>
+               </tr>
+               <tr>
+                  <td>Technics</td>
+                  <td>sa-tx30</td>
+                  <td>sintoamplificatore av</td>
+                  <td></td>
+                  <td></td>
+                  <td>400</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Technics</td>
+                  <td>sa-tx50</td>
+                  <td>sintoamplificatore av</td>
+                  <td></td>
+                  <td></td>
+                  <td>450</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Technics</td>
+                  <td>sa-tx50</td>
+                  <td>sintoamplificatore av</td>
+                  <td></td>
+                  <td></td>
+                  <td>400</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Telefunken</td>
+                  <td>tt-750</td>
+                  <td>sintonizzatore</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Telefunken</td>
+                  <td>tt-750</td>
+                  <td>sintonizzatore</td>
+                  <td></td>
+                  <td>analogico,indicazione digitale,memorie</td>
+                  <td>120</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Thorens</td>
+                  <td>disc-contact</td>
+                  <td>accessori giradischi</td>
+                  <td></td>
+                  <td></td>
+                  <td>140</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Thorens</td>
+                  <td>disc-contact</td>
+                  <td>accessori giradischi</td>
+                  <td></td>
+                  <td></td>
+                  <td>140</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Thorens</td>
+                  <td>td126</td>
+                  <td>giradischi</td>
+                  <td></td>
+                  <td>con braccio tp16, strobo bruciata</td>
+                  <td>500</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tivoli</td>
+                  <td>model 1</td>
+                  <td>radio</td>
+                  <td></td>
+                  <td></td>
+                  <td>90</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tivoli</td>
+                  <td>model 1</td>
+                  <td>radio</td>
+                  <td></td>
+                  <td></td>
+                  <td>90</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tivoli</td>
+                  <td>model 1</td>
+                  <td>radio</td>
+                  <td></td>
+                  <td></td>
+                  <td>120</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Topping</td>
+                  <td>e30</td>
+                  <td>convertitore</td>
+                  <td></td>
+                  <td></td>
+                  <td>140</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Toshiba</td>
+                  <td>sb404</td>
+                  <td>amplificatore integrato</td>
+                  <td></td>
+                  <td>quadrifonico 16w x4</td>
+                  <td>140</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Toshiba</td>
+                  <td>sonoplan 25</td>
+                  <td>casse</td>
+                  <td>1974</td>
+                  <td>piatte bertagni</td>
+                  <td>160</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Tprogress</td>
+                  <td>unit 3</td>
+                  <td>sintoamplificatore av</td>
+                  <td></td>
+                  <td></td>
+                  <td>80</td>
+                  <td>rotto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>tung sol</td>
+                  <td>kt120</td>
+                  <td>VALVOLE</td>
+                  <td></td>
+                  <td>8 pezzi, 2 quartetti selezionati audiophonics, fat.</td>
+                  <td>1200</td>
+                  <td>nuove</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Ultrasone</td>
+                  <td>hfi-15g</td>
+                  <td>cuffia</td>
+                  <td></td>
+                  <td></td>
+                  <td>40</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>variac 3kw</td>
+                  <td>DA DEFINIRE</td>
+                  <td>Strumenti laboratorio</td>
+                  <td></td>
+                  <td></td>
+                  <td>100</td>
+                  <td>pronto</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>varie potenza</td>
+                  <td>DA DEFINIRE</td>
+                  <td>VALVOLE</td>
+                  <td></td>
+                  <td></td>
+                  <td>300</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>varie segnale</td>
+                  <td>DA DEFINIRE</td>
+                  <td>VALVOLE</td>
+                  <td></td>
+                  <td></td>
+                  <td>300</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Visonik</td>
+                  <td>david 5000</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>140</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Visonik</td>
+                  <td>david 5000</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>attive</td>
+                  <td>180</td>
+                  <td></td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Wharfedale</td>
+                  <td>active diamond</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>200</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Wharfedale</td>
+                  <td>option 1</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td>riparare finali (6x quad 405) e crx ingresso</td>
+                  <td>2000</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Yamaha</td>
+                  <td>ns-10</td>
+                  <td>casse</td>
+                  <td></td>
+                  <td></td>
+                  <td>350</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Yamaha</td>
+                  <td>deq5</td>
+                  <td>equalizzatore parametrico</td>
+                  <td></td>
+                  <td>digitale, aes-ebu, clock esterno</td>
+                  <td>150</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Yamaha</td>
+                  <td>deq5</td>
+                  <td>equalizzatore parametrico</td>
+                  <td></td>
+                  <td>digitale, aes-ebu, clock esterno</td>
+                  <td>150</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Yamaha</td>
+                  <td>deq7</td>
+                  <td>equalizzatore parametrico</td>
+                  <td></td>
+                  <td>digitale proprietario yamaha, delay</td>
+                  <td>150</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Yamaha</td>
+                  <td>mx-2000</td>
+                  <td>amplificatore finale</td>
+                  <td></td>
+                  <td></td>
+                  <td>2000</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td>110v</td>
+               </tr>
+               <tr>
+                  <td>Yamaha</td>
+                  <td>cd-rw1000</td>
+                  <td>masterizzatore</td>
+                  <td></td>
+                  <td></td>
+                  <td>450</td>
+                  <td>pronto</td>
+                  <td>si</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Yamaha</td>
+                  <td>mvs-1</td>
+                  <td>preamplificatore passivo 6ch</td>
+                  <td></td>
+                  <td></td>
+                  <td>140</td>
+                  <td>pronto</td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Yamaha</td>
+                  <td>dsp-1</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td></td>
+                  <td>90</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Yamaha</td>
+                  <td>dsp-1</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td></td>
+                  <td>60</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Yamaha</td>
+                  <td>dsp-3000</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td></td>
+                  <td>200</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Yamaha</td>
+                  <td>dsp-3000</td>
+                  <td>processore</td>
+                  <td></td>
+                  <td></td>
+                  <td>190</td>
+                  <td></td>
+                  <td>no</td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+            </tbody>
+         </table>
+      </p>
+   </body>
+</html>
